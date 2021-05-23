@@ -27,9 +27,9 @@ def main(args):
             supervisor.train(sess=sess)
 
 
-
 parser = argparse.ArgumentParser()
-args = parser.parse_args()
+# args = parser.parse_args()
+args = parser.parse_known_args()[0]
 args.use_cpu_only = True
 args.config_filename = 'data/model/dcrnn_la.yaml'
 
@@ -44,4 +44,9 @@ if __name__ == '__main__':
     parser.add_argument('--use_cpu_only', default=False, type=bool, help='Set to true to only use cpu.')
     args = parser.parse_args()
     main(args)
+'''
+
+
+'''results:
+
 '''
