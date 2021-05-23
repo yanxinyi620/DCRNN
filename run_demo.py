@@ -26,6 +26,18 @@ def run_dcrnn(args):
         print('Predictions saved as {}.'.format(args.output_filename))
 
 
+
+parser = argparse.ArgumentParser()
+# args = parser.parse_args()
+args = parser.parse_known_args()[0]
+args.use_cpu_only = True
+args.config_filename = 'data/model/pretrained/METR-LA/config.yaml'
+args.output_filename = 'data/dcrnn_predictions.npz'
+
+run_dcrnn(args)
+
+
+'''
 if __name__ == '__main__':
     sys.path.append(os.getcwd())
     parser = argparse.ArgumentParser()
@@ -35,3 +47,4 @@ if __name__ == '__main__':
     parser.add_argument('--output_filename', default='data/dcrnn_predictions.npz')
     args = parser.parse_args()
     run_dcrnn(args)
+'''
