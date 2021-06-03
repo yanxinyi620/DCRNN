@@ -101,3 +101,17 @@ ENV/
 
 # pycharm
 .idea/
+
+
+# myself
+.vscode/
+metr-la.h5
+pems-bay.h5
+
+data/METR-LA/
+data/PEMS-BAY/
+
+data/model/dcrnn_DR_*
+data/model/pretrained/METR-LA/events.out.tfevents.*
+
+data/dcrnn_predictions.npz
